@@ -4,3 +4,4 @@
 /Gemfile.lock
 /.jekyll-cache
 .DS_Store
+*.code-workspace
