@@ -47,7 +47,7 @@ replace属性的作用是控制路由跳转时控制浏览器历史记录的模�
 在组件中更改浏览器历史记录模式为replace：
 
 ```vue
-<router-link replace ......>News</router-link>
+<router-link replace>News</router-link>
 ```
 
 ## 编程式路由导航
