@@ -1,7 +1,7 @@
 ---
 layout: mypost
 title: Vue Router的使用（一）
-categories: [Vue]
+categories: [Vue2]
 ---
 
 Vue Router是Vue官方的一个插件库，用来实现SPA（single page web application）。

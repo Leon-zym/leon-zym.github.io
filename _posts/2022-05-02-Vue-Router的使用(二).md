@@ -1,7 +1,7 @@
 ---
 layout: mypost
 title: Vue Router的使用（二）
-categories: [Vue]
+categories: [Vue2]
 ---
 
 ## 路由的props配置
