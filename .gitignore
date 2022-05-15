@@ -5,3 +5,4 @@
 /.jekyll-cache
 .DS_Store
 *.code-workspace
+.obsidian
