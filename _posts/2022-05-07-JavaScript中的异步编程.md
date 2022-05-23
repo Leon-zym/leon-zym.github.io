@@ -6,7 +6,7 @@ categories: [JavaScript]
 
 文章摘录来源：[极客学院Wiki](https://wiki.jikexueyuan.com/project/es6/async.html#:~:text=%E6%89%80%E8%B0%93%22%E5%BC%82%E6%AD%A5%22%EF%BC%8C%E7%AE%80%E5%8D%95%E8%AF%B4,%E7%9A%84%E6%89%A7%E8%A1%8C%EF%BC%8C%E5%B0%B1%E5%8F%AB%E5%81%9A%E5%BC%82%E6%AD%A5%E3%80%82)
 
-# 异步操作
+
 
 异步编程对 JavaScript 语言太重要。JavaScript 只有一根线程，如果没有异步编程，根本没法用，非卡死不可。
 

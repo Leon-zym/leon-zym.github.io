@@ -1,7 +1,7 @@
 ---
 layout: mypost
 title: 解决黑苹果macOS12 Monterey睡眠唤醒后蓝牙失效问题
-categories: [小技巧]
+categories: [Tips]
 ---
 
 ## 前言
