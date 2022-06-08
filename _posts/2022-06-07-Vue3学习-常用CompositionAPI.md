@@ -1,6 +1,6 @@
 ---
 layout: mypost
-title: Vue3学习(一)
+title: Vue3学习-常用CompositionAPI
 categories: [Vue3]
 ---
 
@@ -27,7 +27,7 @@ const app = createApp(App)
 app.mount('#app')
 ```
 
-Vue3的template模板可以没有根标签包裹了。
+Vue3的template模板可以没有根标签包裹了。实质上Vue3是自动使用Fragment虚拟元素将多个标签包裹，然后渲染的时候再去掉。
 
 ```html
 <template>
@@ -83,7 +83,7 @@ const foo = ref(initValue)
 
 在js中读取操作数据`foo.value`，而在html模板中读取数据`foo`。
 
-接收的initValue可以是基本类型也可以是对象类型。响应式的实现原理上，基本类型依靠`Object.defineProperty()`，对象类型依靠`reactive`函数。
+接收的initValue可以是基本类型也可以是对象类型。响应式的实现原理上，基本类型依靠Object.defineProperty()，对象类型依靠reactive函数。
 
 ## reactive函数
 
@@ -127,8 +127,8 @@ new Proxy(data, {
 
 从实现原理：
 
-- ref通过`Object.defineProperty()`来实现响应式（数据劫持）
-- reactive通过`Proxy`来实现响应式（数据劫持），并通过`Reflect`操作源对象内部的数据
+- ref通过Object.defineProperty()来实现响应式（数据劫持）
+- reactive通过Proxy来实现响应式（数据劫持），并通过Reflect操作源对象内部的数据
 
 从使用方式：
 
@@ -137,15 +137,15 @@ new Proxy(data, {
 
 ## setup的两个注意点
 
-setup函数会在`beforeCreate()`之前执行一次，其中的this是undefined。
+setup函数会在beforeCreate()之前执行一次，其中的this是undefined。
 
 setup的参数：
 
 - props：值为对象，包含：组件外部传递过来，且组件内部声明接收了的属性
 - context：上下文对象
-  - attrs: 值为对象，包含：组件外部传递过来，但没有在props配置中声明的属性, 相当于`this.$attrs`
-  - slots: 收到的插槽内容, 相当于`this.$slots`
-  - emit: 分发自定义事件的函数, 相当于`this.$emit`
+  - attrs: 值为对象，包含：组件外部传递过来，但没有在props配置中声明的属性, 相当于this.$attrs
+  - slots: 收到的插槽内容, 相当于this.$slots
+  - emit: 分发自定义事件的函数, 相当于this.$emit
 
 ## computed函数
 
@@ -241,21 +241,21 @@ beforeDestroy和destroyed两个钩子变成了beforeUnmount和unmounted
 
 ![image-2022060632919611 PM](image-2022060632919611%20PM.png)
 
-Composition API形式的生命周期钩子需要先引入后使用，写在setup中。而对应在 `beforeCreate` 和 `created` 中的代码都直接在 `setup` 函数中编写。
+Composition API形式的生命周期钩子需要先引入后使用，写在setup中。而对应在beforeCreate和created中的代码都直接在setup函数中编写。
 
 ## 自定义hook函数
 
 hook本质上是一个函数，把setup中的使用的一些Composition API进行了封装，然后组件由外部将hook引入。hook函数类似于Vue2的mixin，可以实现复用代码，让代码的逻辑更加清楚易懂。
 
-## toRef
+## toRef与toRefs
 
-`toRef()`创建一个ref对象，其value值指向另一个对象中的某个属性。可以用在要将响应式对象中的某个属性单独提供给外部使用的情况。
+toRef()创建一个ref对象，其value值指向另一个对象中的某个属性。可以用在要将响应式对象中的某个属性单独提供给外部使用的情况。
 
 ```js
 const name = toRef(person, 'name')
 ```
 
-另外，`toRefs()`与`toRef()`功能相同，但用于批量创建多个ref对象。
+另外，toRefs()与toRef()功能相同，但用于批量创建多个ref对象。
 
 ```js
 const p = toRefs(person)
