@@ -20,8 +20,10 @@ title: 关于我
 - 了解 HTTP 协议、TCP/IP 协议等计算机网络基础知识，了解浏览器的工作流程
 - 了解 Git、npm 等工具，能够进行项目的管理
 
+- 正在学习微信小程序开发……
+
 ## 联系我
 
-- Email：[leon.zym@outlook.com](mailto:leon.zym@outlook.com)
+- Email：[leonzym97@gmail.com](mailto:leonzym97@gmail.com)
 
 - WeChat：leon-zym

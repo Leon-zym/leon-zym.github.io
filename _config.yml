@@ -1,11 +1,11 @@
 encoding: utf-8
 
 # SEO相关信息
-title: 九七最后一夜
+title: 九七
 description: 九七的个人博客，记录下对技术与生活的思考
-keywords: Blog,HTML,CSS,JavaScript,WLB
+keywords: Blog,HTML,CSS,JavaScript,Vue,Mini-Program,WLB
 author: 九七
-footerText: "热 爱 生 活 请 勿 焦 虑  "
+footerText: '热 爱 生 活 请 勿 焦 虑  '
 
 # 这些不要动
 permalink: /posts/:year/:month/:day/:title.html
@@ -15,20 +15,20 @@ kramdown:
   syntax_highlighter: rouge
 exclude:
   [
-    "CNAME",
-    "README.md",
-    "LICENSE",
-    "_site",
-    "dist",
-    "Gemfile",
-    "Gemfile.lock",
-    "blog.sh",
+    'CNAME',
+    'README.md',
+    'LICENSE',
+    '_site',
+    'dist',
+    'Gemfile',
+    'Gemfile.lock',
+    'blog.sh',
   ]
 
 # 域名配置
 # baseurl配置,如果网站部署在根目录下的其他目录中，请设置为 /目录名
-domainUrl: "https://leonzym.com/"
-baseurl: ""
+domainUrl: 'https://leonzym.com/'
+baseurl: ''
 
 # 吐个槽地址，会在chat页面中重定向到该地址
 # tucaoUrl: https://support.qq.com/product/86335
